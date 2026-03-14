@@ -1,18 +1,10 @@
 <template>
-  <div class="item">
-    <i>
-      <slot name="icon"></slot>
-    </i>
-    <div class="details">
-      <h3>
-        <slot name="heading"></slot>
-      </h3>
-      <slot></slot>
-    </div>
+  <div class="detailedPage">
+    详细消费
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
 .item {
   margin-top: 2rem;
   display: flex;
