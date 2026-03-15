@@ -1,0 +1,272 @@
+{
+  "categories": [
+    {
+      "id": "cat4",
+      "name": "娱乐",
+      "type": "expense",
+      "icon": "🎬",
+      "order": 4
+    },
+    {
+      "id": "cat5",
+      "name": "医疗",
+      "type": "expense",
+      "icon": "💊",
+      "order": 5
+    },
+    {
+      "id": "cat6",
+      "name": "其他",
+      "type": "expense",
+      "icon": "📦",
+      "order": 6
+    },
+    {
+      "id": "cat7",
+      "name": "工资",
+      "type": "income",
+      "icon": "💰",
+      "order": 7
+    },
+    {
+      "id": "cat8",
+      "name": "兼职",
+      "type": "income",
+      "icon": "💻",
+      "order": 8
+    },
+    {
+      "id": "cat9",
+      "name": "投资",
+      "type": "income",
+      "icon": "📈",
+      "order": 9
+    }
+  ],
+  "bills": [
+    {
+      "id": "b1",
+      "year": 2026,
+      "month": 1,
+      "day": 1,
+      "week_of_month": 1,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 68.5,
+      "note": "跨年聚餐"
+    },
+    {
+      "id": "b2",
+      "year": 2026,
+      "month": 1,
+      "day": 2,
+      "week_of_month": 1,
+      "category_id": "cat3",
+      "type": "expense",
+      "amount": 12,
+      "note": "地铁"
+    },
+    {
+      "id": "b3",
+      "year": 2026,
+      "month": 1,
+      "day": 3,
+      "week_of_month": 1,
+      "category_id": "cat2",
+      "type": "expense",
+      "amount": 399,
+      "note": "新年衣服"
+    },
+    {
+      "id": "b4",
+      "year": 2026,
+      "month": 1,
+      "day": 5,
+      "week_of_month": 1,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 35,
+      "note": "午餐"
+    },
+    {
+      "id": "b5",
+      "year": 2026,
+      "month": 1,
+      "day": 7,
+      "week_of_month": 1,
+      "category_id": "cat4",
+      "type": "expense",
+      "amount": 80,
+      "note": "电影"
+    },
+    {
+      "id": "b6",
+      "year": 2026,
+      "month": 1,
+      "day": 8,
+      "week_of_month": 2,
+      "category_id": "cat3",
+      "type": "expense",
+      "amount": 50,
+      "note": "打车"
+    },
+    {
+      "id": "b7",
+      "year": 2026,
+      "month": 1,
+      "day": 10,
+      "week_of_month": 2,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 128,
+      "note": "朋友聚餐"
+    },
+    {
+      "id": "b8",
+      "year": 2026,
+      "month": 1,
+      "day": 12,
+      "week_of_month": 2,
+      "category_id": "cat5",
+      "type": "expense",
+      "amount": 99,
+      "note": "感冒药"
+    },
+    {
+      "id": "b9",
+      "year": 2026,
+      "month": 1,
+      "day": 15,
+      "week_of_month": 3,
+      "category_id": "cat2",
+      "type": "expense",
+      "amount": 1299,
+      "note": "耳机"
+    },
+    {
+      "id": "b10",
+      "year": 2026,
+      "month": 1,
+      "day": 15,
+      "week_of_month": 3,
+      "category_id": "cat7",
+      "type": "income",
+      "amount": 15000,
+      "note": "1月工资"
+    },
+    {
+      "id": "b11",
+      "year": 2026,
+      "month": 1,
+      "day": 18,
+      "week_of_month": 3,
+      "category_id": "cat4",
+      "type": "expense",
+      "amount": 200,
+      "note": "KTV"
+    },
+    {
+      "id": "b12",
+      "year": 2026,
+      "month": 1,
+      "day": 20,
+      "week_of_month": 3,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 45,
+      "note": "早餐"
+    },
+    {
+      "id": "b13",
+      "year": 2026,
+      "month": 1,
+      "day": 22,
+      "week_of_month": 4,
+      "category_id": "cat3",
+      "type": "expense",
+      "amount": 100,
+      "note": "公交卡充值"
+    },
+    {
+      "id": "b14",
+      "year": 2026,
+      "month": 1,
+      "day": 25,
+      "week_of_month": 4,
+      "category_id": "cat8",
+      "type": "income",
+      "amount": 800,
+      "note": "周末兼职"
+    },
+    {
+      "id": "b15",
+      "year": 2026,
+      "month": 1,
+      "day": 27,
+      "week_of_month": 4,
+      "category_id": "cat2",
+      "type": "expense",
+      "amount": 560,
+      "note": "超市采购"
+    },
+    {
+      "id": "b16",
+      "year": 2026,
+      "month": 1,
+      "day": 29,
+      "week_of_month": 5,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 88,
+      "note": "外卖"
+    },
+    {
+      "id": "b17",
+      "year": 2026,
+      "month": 1,
+      "day": 30,
+      "week_of_month": 5,
+      "category_id": "cat4",
+      "type": "expense",
+      "amount": 150,
+      "note": "游戏充值"
+    },
+    {
+      "id": "b18",
+      "year": 2026,
+      "month": 1,
+      "day": 31,
+      "week_of_month": 5,
+      "category_id": "cat6",
+      "type": "expense",
+      "amount": 30,
+      "note": "停车费"
+    },
+    {
+      "id": "b19",
+      "year": 2026,
+      "month": 2,
+      "day": 1,
+      "week_of_month": 1,
+      "category_id": "cat1",
+      "type": "expense",
+      "amount": 120,
+      "note": "春节聚餐"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "bud1",
+      "month": "2026-01",
+      "total_budget": 5000,
+      "enabled": true
+    },
+    {
+      "id": "bud2",
+      "month": "2026-02",
+      "total_budget": 6000,
+      "enabled": true
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
