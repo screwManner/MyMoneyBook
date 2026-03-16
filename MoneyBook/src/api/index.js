@@ -28,6 +28,10 @@ export default {
   getCategories() {
     return apiClient.get('/categories')
   },
+  // 模糊查询分类
+  searchCategories(keyword) {
+    return apiClient.get('/categories', { params: { name_like: keyword } })
+  },
   // 新增分类
   addCategory(category) {
     return apiClient.post('/categories', category)

@@ -52,6 +52,12 @@ export const useBillStore = defineStore('bill', () => {
     const response = await billApi.getCategories()
     categories.value = response.data
   }
+  // 模糊查询分类
+  async function searchCategories(keyword) {
+    const response = await billApi.searchCategories(keyword)
+    categories.value = response.data
+    return response
+  }
   // 新增分类
   async function addCategory(category) {
     const response = await billApi.addCategory(category)
@@ -71,15 +77,22 @@ export const useBillStore = defineStore('bill', () => {
   // 删除分类
   async function deleteCategory(id) {
     const response = await billApi.deleteCategory(id)
-    if(response.status === 200) {
+    if (response.status === 200) {
       categories.value = categories.value.filter((b) => b.id !== id)
       return response
     }
   }
 
   return {
-    fetchBills,addBill,updateBill,deleteBill,
-    fetchCategories,addCategory,updateCategory,deleteCategory,
+    fetchBills,
+    addBill,
+    updateBill,
+    deleteBill,
+    fetchCategories,
+    addCategory,
+    updateCategory,
+    deleteCategory,
+    searchCategories,
     bills,
     categories,
     loading,

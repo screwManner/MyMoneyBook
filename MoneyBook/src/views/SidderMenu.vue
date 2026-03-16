@@ -32,13 +32,21 @@
 </template>
 <script setup>
 import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue'
+import { onMounted,ref } from 'vue'
+import { useRoute } from 'vue-router'
 
-// const handleItemClick = (index) => {
-//   console.log('菜单被点击了',index)
-// }
+// 设置当前菜单按照路由的路径进行高亮显示
+// const route = useRoute()
+// const routeValue = ref('/overView')
+
+
+// onMounted(() => {
+//   console.log('当前路由路径：', route.path)
+//   routeValue.value = route.path
+// })
 
 const handleOpen = (key, keyPath) => {
-  console.log('open',key, keyPath)
+  // routeValue.value = keyPath[0]
 }
 const handleClose = (key, keyPath) => {
   console.log(key, keyPath)

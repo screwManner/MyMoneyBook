@@ -1,15 +1,19 @@
 <template>
   <div class="categoryPage">
-    分类列表
     <div class="categoryHeader">
       <div class="search">
         <el-input
-          v-model="input1"
+          v-model.trim="searchValue"
           style="width: 240px"
           size="large"
           placeholder="请输入分类名称"
-          :suffix-icon="Search"
-        />
+        >
+          <template #suffix>
+            <el-icon style="cursor: pointer;" @click="searchCategories">
+              <Search />
+            </el-icon>
+          </template>
+        </el-input>
       </div>
       <el-button type="primary" @click="handleUpdate('新增')">新增分类</el-button>
     </div>
@@ -55,7 +59,7 @@
         </el-form-item>
         <el-form-item label="分类图标" :label-width="formLabelWidth">
           <template #default="scope">
-            <span>{{ scope.row?.icon}}</span>
+            <span>{{ scope.row?.icon }}</span>
           </template>
         </el-form-item>
       </el-form>
@@ -78,6 +82,8 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 const store = useBillStore()
 // 初始化分类列表数据
 const categoryList = ref([])
+// 搜索输入框的值
+const searchValue = ref('')
 // 初始化弹框表单数据
 const getFormState = () => {
   return {
@@ -100,15 +106,26 @@ const getCategoryList = async () => {
   await store.fetchCategories()
   categoryList.value = store.categories
 }
+// 监听搜索输入框的变化，进行模糊查询
+const searchCategories = async () => {
+  if (searchValue.value === '') {
+    getCategoryList() // 如果搜索框为空，获取完整的分类列表
+  } else {
+    const response = await store.searchCategories(searchValue.value) // 调用模糊查询方法
+    if(response.status === 200){
+      categoryList.value = store.categories // 更新分类列表
+    }
+  }
+}
 // 编辑分类
 const handleUpdate = (txt, row) => {
   // 按钮操作类型赋值
   btnTxt.value = txt
   if (txt === '新增') {
     Object.assign(formStateReactive, getFormState())
-    formStateReactive.id = 'cartTop';
-    formStateReactive.order = 999;
-    formStateReactive.icon = "📦"
+    formStateReactive.id = 'cartTop'
+    formStateReactive.order = 999
+    formStateReactive.icon = '📦'
     dialogFormVisible.value = true
   } else if (txt === '编辑') {
     Object.assign(formStateReactive, row)
