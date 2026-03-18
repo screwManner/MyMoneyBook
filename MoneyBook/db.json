@@ -1,6 +1,27 @@
 {
   "categories": [
     {
+      "id": "cat1",
+      "name": "餐饮",
+      "type": "expense",
+      "icon": "🍔",
+      "order": 1
+    },
+    {
+      "id": "cat2",
+      "name": "购物",
+      "type": "expense",
+      "icon": "🛒",
+      "order": 2
+    },
+    {
+      "id": "cat3",
+      "name": "交通",
+      "type": "expense",
+      "icon": "🚇",
+      "order": 3
+    },
+    {
       "id": "cat4",
       "name": "娱乐",
       "type": "expense",
@@ -45,17 +66,6 @@
   ],
   "bills": [
     {
-      "id": "b1",
-      "year": 2026,
-      "month": 1,
-      "day": 1,
-      "week_of_month": 1,
-      "category_id": "cat1",
-      "type": "expense",
-      "amount": 68.5,
-      "note": "跨年聚餐"
-    },
-    {
       "id": "b2",
       "year": 2026,
       "month": 1,
@@ -63,7 +73,7 @@
       "week_of_month": 1,
       "category_id": "cat3",
       "type": "expense",
-      "amount": 12,
+      "amount": 23,
       "note": "地铁"
     },
     {

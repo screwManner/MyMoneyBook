@@ -19,11 +19,11 @@ export const useBillStore = defineStore('bill', () => {
   const total = computed(() => bills.value.length)
 
   // 获取账单列表
-  async function fetchBills(params) {
+  async function fetchBills() {
     loading.value = true
     try {
       const response = await billApi.getBills()
-      bills.value = respponse.data
+      bills.value = response.data
     } catch (error) {
       loading.value = false
     }
@@ -36,10 +36,11 @@ export const useBillStore = defineStore('bill', () => {
   // 更新账单
   async function updateBill(id, bill) {
     const response = await billApi.updateBill(id, bill)
-    const index = index.value.findIndex((b) => b.id === id)
-    if (index !== -1) {
-      bills.value[index] = response.data
+    const idx = bills.value.findIndex((b) => b.id === id)
+    if (idx !== -1) {
+      bills.value[idx] = response.data
     }
+    return response
   }
   // 删除账单
   async function deleteBill(id) {
@@ -61,7 +62,6 @@ export const useBillStore = defineStore('bill', () => {
   // 新增分类
   async function addCategory(category) {
     const response = await billApi.addCategory(category)
-    categories.calue = response.data
     categories.value.push(response.data)
     return response
   }

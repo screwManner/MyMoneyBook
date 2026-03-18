@@ -18,6 +18,23 @@
 import HeadTop from './views/HeadTop.vue'
 import SidderMenu from './views/SidderMenu.vue'
 import ContainerBox from './views/ContainerBox.vue'
+import { onMounted } from 'vue';
+import { useBillStore } from '@/stores/billStore'
+
+const store = useBillStore()
+// 获取账单列表
+const getBills =async () =>{
+  await store.fetchBills()
+}
+// 获取分类
+const getCategories = async () => {
+  await store.fetchCategories()
+}
+onMounted( () => {
+  getBills()
+  getCategories()
+})
+
 </script>
 
 <style scoped lang="less">
